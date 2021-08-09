@@ -7,6 +7,7 @@ import template1 from "../cert_templates/Template1.png";
 import template2 from "../cert_templates/Template2.png";
 import firebase from "../firebase"
 import template3 from "../cert_templates/Template3.png";
+import template4 from "../cert_templates/Template4.jpeg";
 import ReactToPrint from 'react-to-print';
 
 export class ComponentToPrint extends React.PureComponent {
@@ -72,6 +73,16 @@ export class ComponentToPrint extends React.PureComponent {
                     </div>
                 );
             }
+            case "template4":{
+                return (
+                    <div style={{ position: 'relative' }} id="template2">
+                        <img src={template4} style={{ width: '45rem' }}></img>
+                            <h1 style={{ fontSize: '3rem', color: 'black',position: 'absolute', top:'9rem',left:'25px',wordBreak:'break-all' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
+                            <h6 style={{ fontSize: '15px', fontWeight: '600', color: '#213a62',width:'60%',position: 'absolute', top:'17rem',left:'27px',wordBreak:'break-all'  }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</h6>
+                            <h1 style={{ fontSize: '15px', color: 'black',position: 'absolute', top:'19.95rem',left:'8.6rem',wordBreak:'break-all' }}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                    </div>
+                );
+            }
         }
         
     }
@@ -103,7 +114,7 @@ function Homepage() {
     const [desc, setdesc] = useState('');
     const [author, setauthor] = useState('');
     const [logo, setlogo] = useState('');
-    const [template,settemplate]=useState('template1');
+    const [template,settemplate]=useState('template4');
     const componentRef = useRef();
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
@@ -140,6 +151,9 @@ function Homepage() {
                     </div>
                     <div className={`templates ${template==='template3'?"active":""}`} onClick={()=>settemplate("template3")} >
                         <img src={template3} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template4'?"active":""}`} onClick={()=>settemplate("template4")} >
+                        <img src={template4} alt="" />
                     </div>
                 </div>
                 <div className="middle">
