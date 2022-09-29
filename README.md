@@ -1,71 +1,67 @@
-## Contribution Guidelines🏗
+<h1 align="center">Welcome to Certificate-Generator</h1> 
+<br>
 
-Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and make it better. 
-To start contributing, follow the below guidelines: 
+<div align="center">
+  <img src="https://fossnaija.com/wp-content/uploads/2022/09/fossnaija.com-hacktoberfest-2022-1024x455.png" alt="hacktoberfest22">
+</div>
 
-**1.**  Fork [this](https://github.com/vedant-jain03/certificate-generator) repository.
+<br>
 
-**2.**  Clone your forked copy of the project.
+<div align="center">
+  <img src="https://forthebadge.com/images/badges/for-you.svg" />
+  <img src="https://forthebadge.com/images/badges/made-with-markdown.svg" alt="css">
+  <img src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="js">
+  <img src="https://forthebadge.com/images/badges/open-source.svg" alt="os">
+  <img src="https://forthebadge.com/images/badges/check-it-out.svg" alt="check">
+  <img src="" alt="">
+  <img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+</div>
 
+## Setup Steps
+
+- Go to directory
 ```
-git clone https://github.com/<your_user_name>/certificate-generator.git
+$ cd certificate-generator
 ```
-
-**3.** Navigate to the project directory :file_folder: .
-
+- Install Dependencies
 ```
-cd certificate-generator
+$ npm install
 ```
-
-**4.** Add a reference(remote) to the original repository.
-
+- Start LocalHost Server
 ```
-git remote add upstream https://github.com/vedant-jain03/certificate-generator.git 
-```
-
-**5.** Check the remotes for this repository.
-
-```
-git remote -v
-```
-
-**6.** Always take a pull from the upstream repository to your master branch to keep it at par with the main project(updated repository).
-
-```
-git pull upstream main
+$ npm run start
 ```
 
-**7.** Create a new branch.
-
-```
-git checkout -b <your_branch_name>
-```
-
-**8.** Perfom your desired changes to the code base.
-
-**9.** Track your changes:heavy_check_mark: .
-
-```
-git add . 
-```
-
-**10.** Commit your changes .
-
-```
-git commit -m "Relevant message"
-```
-
-**11.** Push the committed changes in your feature branch to your remote repo.
-
-```
-git push -u origin <your_branch_name>
-```
-
-**12.** To create a pull request, click on `compare and pull requests`.
-
-**13.** Add appropriate title and description to your pull request explaining your changes and efforts done.
-
-**14.** Click on `Create Pull Request`.
+# [Code of Conduct](CODE_OF_CONDUCT.md)
 
 
-**15** Voila :exclamation: You have made a PR to the awesome-javascript-projects :boom: . Wait for your submission to be accepted and your PR to be merged.
+# [Getting Started](contribution_guideline.md)
+
+
+<h2 id="contribute">Contributing</h2>
+<p>
+   Thank you for your interest in contributing to our Repo! Pull requests are welcome. For fixing typos, please make a PR with your fixes. For other contributions, we suggest you to read our <a href="/CONTRIBUTING.md">contribution guidelines</a> to see how you can contribute to this project. We are happy for every contribution. 
+    
+</p>
+
+<h2 id="prs">Issues & Pull Requests</h2>
+
+Before making pull requests please look at our contributing guidelines. You can start working on the issue which are mentioned in issues section. Just drop a comment before working on the issue. Thank you!
+
+<h2 id="license">License</h2>
+
+The **code** is this repo is licensed under the MIT license. Feel free to use and share it as per the license.
+
+<br>
+
+# ✨ Contributors
+
+<a href="https://github.com/vedant-jain03/certificate-generator/graphs/contributors" >
+  <img src="https://contrib.rocks/image?repo=vedant-jain03/certificate-generator"/>
+</a>
+
+
+<div align="center">
+ <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="love" />
+ <img src="https://forthebadge.com/images/badges/thats-how-they-get-you.svg" alt="how">
+</div>
