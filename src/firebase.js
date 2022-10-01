@@ -1,9 +1,14 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import { config } from 'dotenv'
+config();
+
+const key = process.env.FIREBASE_KEY;
+
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCvZYqnlVMtmDJjSQ_WNQa6nFXul9z46mk",
+    apiKey: `${key}`,
     authDomain: "login-f4489.firebaseapp.com",
     databaseURL: "https://login-f4489-default-rtdb.firebaseio.com",
     projectId: "login-f4489",

@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "dotenv": "^16.0.3",
     "firebase": "^8.6.3",
     "pdf-lib": "^1.16.0",
     "react": "^17.0.2",

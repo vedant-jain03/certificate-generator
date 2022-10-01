@@ -27,15 +27,25 @@ $ cd certificate-generator
 ```
 $ npm install
 ```
+- Rename .env.example to .env and add your Firebase api key
+```
+$ mv .env.example .env
+```
 - Start LocalHost Server
 ```
 $ npm run start
 ```
 
+## Tech Stack Used
+  - Javascript
+  - React
+  - Firebase
+  - Material UI
+
 # [Code of Conduct](CODE_OF_CONDUCT.md)
 
 
-# [Getting Started](contribution_guideline.md)
+# [Getting Started](CONTRIBUTING.md)
 
 
 <h2 id="contribute">Contributing</h2>
