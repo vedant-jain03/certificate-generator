@@ -115,6 +115,7 @@ function Homepage() {
     const [author, setauthor] = useState('');
     const [logo, setlogo] = useState('');
     const [template,settemplate]=useState('template4');
+    const [uploadLogo, setUploadLogo] = useState();
     const componentRef = useRef();
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
@@ -122,6 +123,17 @@ function Homepage() {
     const signout = () => {
         firebase.auth().signOut();
     }
+    const logoUploadRef = useRef();
+    const handleUploadLogoClick = (e) => {
+        logoUploadRef.current.click()
+    }
+    const handleUploadLogoChange = (e) => {
+        const file = e.target.files[0];
+        setUploadLogo(file)
+        setlogo(URL.createObjectURL(file))
+        e.target.value = null;
+    }
+
     return (
         <div className="main">
             <Popup trigger={pop} setpop={setpop} >
@@ -179,7 +191,15 @@ function Homepage() {
                         </div>
                         <div className="input-box">
                             <span className="details">Logo URL</span>
-                            <input type="text" placeholder="Enter logo URL" onChange={e => setlogo(e.target.value)} />
+                                <div className='logo-inputs'>
+                                    <input type="text" placeholder={!uploadLogo?.name ? "Enter logo URL" : uploadLogo?.name} onChange={e => setlogo(e.target.value)} />
+                                        <div className='logo-upload-icon'>
+                                            <button onClick={handleUploadLogoClick}>
+                                                <ArrowUpwardIcon /> 
+                                            </button>
+                                            <input type='file' accept="image/png, image/gif, image/jpeg" hidden ref={logoUploadRef} onChange={handleUploadLogoChange}/>
+                                        </div>
+                                </div>
                         </div>
 
                         {/* <button className="generate" onClick={handlePrint}>Generate  Certificate</button> */}

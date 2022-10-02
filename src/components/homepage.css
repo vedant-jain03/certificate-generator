@@ -257,3 +257,23 @@
   width: 100%;
   height: 100%;
 }
+.logo-inputs{
+  display: flex;
+}
+.logo-inputs .logo-upload-icon{
+  padding: 6px 0 10px 10px;
+}
+.logo-inputs .logo-upload-icon button{
+  line-height: 1;
+  border-radius: 3px;
+  border: navajowhite;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 108, 55) !important;
+  border-color: rgb(255, 108, 55) !important;
+  text-transform: uppercase;
+  cursor: pointer;
+}
