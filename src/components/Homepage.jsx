@@ -137,14 +137,14 @@ export class ComponentToPrint extends React.PureComponent {
                         <img src={template7} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
-                            <h2 style={{color: 'white', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
-                            <h3 style={{ fontSize: '16px', fontWeight: '500', color: 'rgb(217, 105, 13)', textTransform: 'uppercase', letterSpacing: '3px' }}>is hereby awarded to</h3>
-                            <h1 style={{ fontSize: '3rem', color: '#9e0b00' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
-                            <p style={{ fontSize: '15px', fontWeight: '600', color: 'rgb(0, 0, 0)',width:'60%',textAlign:'center' }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</p>
+                            <h2 style={{color: 'orange', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
+                            <h3 style={{ fontSize: '16px', fontWeight: '500', color: 'orange', textTransform: 'uppercase', letterSpacing: '3px' }}>is hereby awarded to</h3>
+                            <h1 style={{ fontSize: '3rem', color: 'red' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
+                            <p style={{ fontSize: '15px', fontWeight: '600', color: 'yellow',width:'60%',textAlign:'center' }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</p>
                         </div>
                         <div className="author" style={{ position: 'absolute', top: '70%', left: '41%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-                            <h2 style={{ fontSize: '12px', color: 'gold', textDecoration: 'underline' }}>Course Director</h2>
-                            <h1 style={{ fontSize: '20px', color: 'rgb(218, 165, 32)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                            <h2 style={{ fontSize: '12px', color: 'red', textDecoration: 'underline' }}>Course Director</h2>
+                            <h1 style={{ fontSize: '20px', color: 'black',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
                         {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
         
