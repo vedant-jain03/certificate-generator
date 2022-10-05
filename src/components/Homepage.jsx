@@ -131,7 +131,7 @@ export class ComponentToPrint extends React.PureComponent {
                 );
             }
 
-            case " template7":{
+            case "template7":{
                 return (
                     <div style={{ position: 'relative' }} id="template2">
                         <img src={template7} style={{ width: '45rem' }}></img>
