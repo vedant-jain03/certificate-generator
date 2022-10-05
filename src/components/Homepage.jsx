@@ -269,6 +269,21 @@ function Homepage() {
                     <div className={`templates ${template==='template4'?"active":""}`} onClick={()=>settemplate("template4")} >
                         <img src={template4} alt="" />
                     </div>
+                    <div className={`templates ${template==='template5'?"active":""}`} onClick={()=>settemplate("template5")} >
+                        <img src={template5} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template6'?"active":""}`} onClick={()=>settemplate("template6")} >
+                        <img src={template6} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template7'?"active":""}`} onClick={()=>settemplate("template7")} >
+                        <img src={template7} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template8'?"active":""}`} onClick={()=>settemplate("template8")} >
+                        <img src={template8} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template9'?"active":""}`} onClick={()=>settemplate("template9")} >
+                        <img src={template9} alt="" />
+                    </div>
                 </div>
                 <div className="middle">
                     <ComponentToPrint ref={componentRef} name={name} heading={heading} desc={desc} author={author} logo={logo} template={template} />
