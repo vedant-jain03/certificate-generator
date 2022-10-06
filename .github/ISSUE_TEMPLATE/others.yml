@@ -1,0 +1,28 @@
+name: 🔧 Other
+description: Use this for any other issues. Please do NOT create blank issues
+title: "[OTHER] <description>"
+body:
+  - type: markdown
+    attributes:
+      value: "# Other issue"
+  - type: textarea
+    id: issuedescription
+    attributes:
+      label: Something else you wanna ask me About?
+      description: Provide a clear and concise explanation of your issue.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else I should know about this issue?
+    validations:
+      required: false

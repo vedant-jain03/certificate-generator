@@ -1,0 +1,33 @@
+name: 🐛 Bug
+title: "[BUG] <description>"
+description: Found a bug ? Let me know about it 
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the issue
+    validations:
+      required: true
+  - type: textarea
+    id: Steps
+    attributes:
+      label: Steps to Recreate the Issue
+      description: Please mention the steps in Order to recreate the Issue
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else I should know about this bug?
+    validations:
+      required: false
