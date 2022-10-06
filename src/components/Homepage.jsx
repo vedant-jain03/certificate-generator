@@ -123,7 +123,7 @@ export class ComponentToPrint extends React.PureComponent {
                         </div>
                         <div className="author" style={{ position: 'absolute', top: '70%', left: '41%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
                             <h2 style={{ fontSize: '12px', color: 'white', textDecoration: 'underline' }}>Course Director</h2>
-                            <h1 style={{ fontSize: '20px', color: 'rgb(231, 133, 58)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                            <h1 style={{ fontSize: '20px', color: '#ffff58', fontWeight: '100'}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
                         {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
         
@@ -152,7 +152,7 @@ export class ComponentToPrint extends React.PureComponent {
                 );
             }
 
-            case " template8":{
+            case "template8":{
                 return (
                     <div style={{ position: 'relative' }} id="template2">
                         <img src={template8} style={{ width: '45rem' }}></img>
@@ -173,7 +173,7 @@ export class ComponentToPrint extends React.PureComponent {
                 );
             }
 
-            case " template9":{
+            case "template9":{
                 return (
                     <div style={{ position: 'relative' }} id="template2">
                         <img src={template8} style={{ width: '45rem' }}></img>
@@ -184,7 +184,7 @@ export class ComponentToPrint extends React.PureComponent {
                             <h1 style={{ fontSize: '3rem', color: '#0edee6' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
                             <p style={{ fontSize: '15px', fontWeight: '600', color: 'rgb(6, 124, 214)',width:'60%',textAlign:'center' }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</p>
                         </div>
-                        <div className="author" style={{ position: 'absolute', top: '70%', left: '41%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                        <div className="author" style={{ position: 'absolute', top: '68%', left: '44%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
                             <h2 style={{ fontSize: '12px', color: '#0edee6', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: 'rgb(6, 124, 214)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
