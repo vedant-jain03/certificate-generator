@@ -8,15 +8,29 @@ body:
     attributes:
       label: Description
       description: A brief description of the issue
+      placeholder: Short and explicit description of your incident...
     validations:
-      required: true
+      required: false
   - type: textarea
     id: Steps
     attributes:
       label: Steps to Recreate the Issue
       description: Please mention the steps in Order to recreate the Issue
+    value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    render: bash  
     validations:
-      required: true
+      required: false
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Expected Behaviour
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: false
   - type: textarea
     id: screenshots
     attributes:
@@ -25,9 +39,14 @@ body:
     validations:
       required: false
   - type: textarea
-    id: extrainfo
+    id: system
     attributes:
-      label: Additional information
-      description: Is there anything else I should know about this bug?
+      label: "Device Information"
+      description: What system/browser(s) are you seeing the problem on ?
+    value: |
+        1. OS: [eg. iOS] 
+        2. Browser [e.g. chrome, safari]
+        3. Version [e.g. 22]
+    render: bash
     validations:
       required: false
