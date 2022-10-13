@@ -1,8 +1,6 @@
-### Related issue
-<!-- Remove this field if it doesn't fix any issue -->
+### Fixes #<issue-number>
 
 ### What changes does this PR do?
 
-### Screenshots (If any)
-
-### Questions
+### Have you tested the working of the feature you fixed?
+<-Yes or No->
