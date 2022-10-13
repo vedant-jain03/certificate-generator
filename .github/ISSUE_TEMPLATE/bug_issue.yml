@@ -16,12 +16,12 @@ body:
     attributes:
       label: Steps to Recreate the Issue
       description: Please mention the steps in Order to recreate the Issue
-    value: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
-    render: bash  
+      value: |
+          1. Go to '...'
+          2. Click on '....'
+          3. Scroll down to '....'
+          4. See error
+      render: bash  
     validations:
       required: false
   - type: textarea
@@ -43,10 +43,10 @@ body:
     attributes:
       label: "Device Information"
       description: What system/browser(s) are you seeing the problem on ?
-    value: |
-        1. OS: [eg. iOS] 
-        2. Browser [e.g. chrome, safari]
-        3. Version [e.g. 22]
-    render: bash
+      value: |
+          1. OS: [eg. iOS] 
+          2. Browser [e.g. chrome, safari]
+          3. Version [e.g. 22]
+      render: bash
     validations:
       required: false
