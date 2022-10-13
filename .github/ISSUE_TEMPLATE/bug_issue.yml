@@ -57,7 +57,7 @@ body:
       description: Are you interested in working this Issue ?? (Yes/No)
       multiple: false
       options:
-        - Yes
-        - No
-    validations:
+        - "Yes"
+        - "No"
       required: false
+    validations:

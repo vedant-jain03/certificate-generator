@@ -43,7 +43,7 @@ body:
       description: Are you interested in working this Issue ?? (Yes/No)
       multiple: false
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: false
