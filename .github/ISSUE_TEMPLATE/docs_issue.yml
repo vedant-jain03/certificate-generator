@@ -9,7 +9,7 @@ body:
       label: Description
       description: A brief description of the issue
     validations:
-      required: true
+      required: false
   - type: textarea
     id: screenshots
     attributes:
@@ -22,5 +22,16 @@ body:
     attributes:
       label: Additional information
       description: Is there anything else I should know about this issue?
+    validations:
+      required: false
+  - type: dropdown
+    id: work
+    attributes:
+      label: Want to contribute ?
+      description: Are you interested in working this Issue ?? (Yes/No)
+      multiple: false
+      options:
+        - Yes
+        - No
     validations:
       required: false

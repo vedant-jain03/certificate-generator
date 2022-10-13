@@ -7,9 +7,23 @@ body:
     id: description
     attributes:
       label: Description
-      description: A brief description of the feature you wish to have in the Project 
+      description: Is this Issue related to a Problem, please describe it briefly
     validations:
-      required: true
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: Description
+      description: Do you have a solution ready, give a clear description for it
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Any alternatives you have considered, describe them briefly
+    validations:
+      required: false
   - type: textarea
     id: screenshots
     attributes:
@@ -22,5 +36,16 @@ body:
     attributes:
       label: Additional information
       description: Is there anything else we should know about this idea?(any dependency changes/ Miscellaneous Info)
+    validations:
+      required: false
+  - type: dropdown
+    id: work
+    attributes:
+      label: Want to contribute ?
+      description: Are you interested in working this Issue ?? (Yes/No)
+      multiple: false
+      options:
+        - Yes
+        - No
     validations:
       required: false
