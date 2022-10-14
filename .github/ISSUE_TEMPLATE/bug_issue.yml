@@ -1,0 +1,63 @@
+name: 🐛 Bug
+title: "[BUG] <description>"
+description: Found a bug ? Let me know about it 
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: false
+  - type: textarea
+    id: Steps
+    attributes:
+      label: Steps to Recreate the Issue
+      description: Please mention the steps in Order to recreate the Issue
+      value: |
+          1. Go to '...'
+          2. Click on '....'
+          3. Scroll down to '....'
+          4. See error
+      render: bash  
+    validations:
+      required: false
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Expected Behaviour
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: system
+    attributes:
+      label: "Device Information"
+      description: What system/browser(s) are you seeing the problem on ?
+      value: |
+          1. OS: [eg. iOS] 
+          2. Browser [e.g. chrome, safari]
+          3. Version [e.g. 22]
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: work
+    attributes:
+      label: Want to contribute ?
+      description: Are you interested in working this Issue ?? (Yes/No)
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: false

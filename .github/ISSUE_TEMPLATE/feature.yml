@@ -1,0 +1,51 @@
+name: 💡 Feature
+description: Have a new idea/feature? Please suggest 😄!
+title: "[FEATURE] <description>"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Is this Issue related to a Problem, please describe it briefly
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: Description
+      description: Do you have a solution ready, give a clear description for it
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Any alternatives you have considered, describe them briefly
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this idea?(any dependency changes/ Miscellaneous Info)
+    validations:
+      required: false
+  - type: dropdown
+    id: work
+    attributes:
+      label: Want to contribute ?
+      description: Are you interested in working this Issue ?? (Yes/No)
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: false
