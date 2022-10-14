@@ -257,40 +257,33 @@ function Homepage() {
             <div className="maincontainer">
                 <div className="leftmost">
                     <h1>Templates</h1>
-                             <table class="table table-bordered table-striped mb-0">
-                                <thead>
-                                   <tr className={`templates ${template==='template1'?"active":""}`} onClick={()=>settemplate("template1")}>
-                                       <th scope="col"><img src={template1} alt="" /></th> 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <tr className={`templates ${template==='template2'?"active":""}`} onClick={()=>settemplate("template2")}>
-                                  <th scope="col"><img src={template2} alt="" /></th>
-                                </tr>
-                                <tr className={`templates ${template==='template3'?"active":""}`} onClick={()=>settemplate("template3")}>
-                                  <th scope="col"><img src={template3} alt="" /></th>
-                               
-                                <tr className={`templates ${template==='template4'?"active":""}`} onClick={()=>                             settemplate("template4")}>
-                                  <th scope="col"><img src={template4} alt="" /></th>
-                                </tr>
-                                <tr className={`templates ${template==='template5'?"active":""}`} onClick={()=>settemplate("template5")}>
-                                  <th scope="col"><img src={template5} alt="" /></th>
-                                </tr>
-                                <tr className={`templates ${template==='template6'?"active":""}`} onClick={()=>settemplate("template6")}>
-                                  <th scope="col"><img src={template6} alt="" /></th>
-                                </tr>
-                                <tr className={`templates ${template==='template7'?"active":""}`} onClick={()=>settemplate("template7")}>
-                                  <th scope="col"><img src={template7} alt="" /></th>
-                               </tr>
-                               <tr className={`templates ${template==='template8'?"active":""}`} onClick={()=>settemplate("template8")}>
-                                 <th scope="col"><img src={template8} alt="" /></th>
-                               </tr>
-                               <tr className={`templates ${template==='template9'?"active":""}`} onClick={()=>settemplate("template9")}>
-                                 <th scope="col"><img src={template9} alt="" /></th>
-                               </tr>
-                         </tbody>
-                     </table>
-                 </div>
+                             <div className={`templates ${template==='template1'?"active":""}`} onClick={()=>settemplate("template1")} >
+                        <img src={template1} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template2'?"active":""}`} onClick={()=>settemplate("template2")} >
+                        <img src={template2} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template3'?"active":""}`} onClick={()=>settemplate("template3")} >
+                        <img src={template3} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template4'?"active":""}`} onClick={()=>settemplate("template4")} >
+                        <img src={template4} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template5'?"active":""}`} onClick={()=>settemplate("template5")} >
+                        <img src={template5} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template6'?"active":""}`} onClick={()=>settemplate("template6")} >
+                        <img src={template6} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template7'?"active":""}`} onClick={()=>settemplate("template7")} >
+                        <img src={template7} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template8'?"active":""}`} onClick={()=>settemplate("template8")} >
+                        <img src={template8} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template9'?"active":""}`} onClick={()=>settemplate("template9")} >
+                        <img src={template9} alt="" />
+                    </div>
                 </div>
                 <div className="middle">
                     <ComponentToPrint ref={componentRef} name={name} heading={heading} desc={desc} author={author} logo={logo} template={template} />
