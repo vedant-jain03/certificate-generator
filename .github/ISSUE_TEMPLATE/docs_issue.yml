@@ -1,0 +1,37 @@
+name: 📄 Documentation
+description: Found an issue in the documentation?
+title: "[DOCS] <description>"
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the issue
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else I should know about this issue?
+    validations:
+      required: false
+  - type: dropdown
+    id: work
+    attributes:
+      label: Want to contribute ?
+      description: Are you interested in working this Issue ?? (Yes/No)
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: false
