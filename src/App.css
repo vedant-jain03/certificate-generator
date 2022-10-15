@@ -86,3 +86,14 @@
   color: white;
   text-align: center;
 }
+footer {
+  position: fixed;
+  background-color: #2c393e;;
+  color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 19px;
+  text-align: center;
+  font-size: 18px;
+}
