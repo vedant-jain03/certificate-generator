@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import "./homepage.css"
-import { useReactToPrint } from 'react-to-print';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import template1 from "../cert_templates/Template1.png";
@@ -22,7 +21,7 @@ export class ComponentToPrint extends React.PureComponent {
             case "template1":{
                 return (
                     <div style={{ position: 'relative' }} id="template1" >
-                        <img src={template1} style={{ width: '45rem' }}></img>
+                        <img src={template1} style={{ width: '45rem' }} alt='template1'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '39%', left: '36%', width: '60%' }}>
                             <h2 style={{ textTransform: 'uppercase', color: '#0e4573', textDecoration: 'underline', marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -42,7 +41,7 @@ export class ComponentToPrint extends React.PureComponent {
             case "template2":{
                 return (
                     <div style={{ position: 'relative' }} id="template2">
-                        <img src={template2} style={{ width: '45rem' }}></img>
+                        <img src={template2} style={{ width: '45rem' }} alt='template2'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '34%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                             <h2 style={{color: 'rgb(255 251 240)', textDecoration: 'underline', marginBottom: '3rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -54,15 +53,15 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: 'rgb(187 238 243)', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: '#ace3ea',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '78%', left: '62%' }} alt="logo" />}
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '81%', left: '62%' }} alt="logo" />}
         
                     </div>
                 );
             }
             case "template3":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
-                        <img src={template3} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template3">
+                        <img src={template3} style={{ width: '45rem' }} alt='template3'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                             <h2 style={{color: 'white', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -74,25 +73,26 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: 'white', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: 'rgb(231 133 58)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '50%', transform: 'translate(-50%,0)' }} alt="logo" />}
         
                     </div>
                 );
             }
             case "template4":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
-                        <img src={template4} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template4">
+                        <img src={template4} style={{ width: '45rem' }} alt='template4'></img>
                             <h1 style={{ fontSize: '3rem', color: 'black',position: 'absolute', top:'9rem',left:'25px',wordBreak:'break-all' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
                             <h6 style={{ fontSize: '15px', fontWeight: '600', color: '#213a62',width:'60%',position: 'absolute', top:'17rem',left:'27px',wordBreak:'break-all'  }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</h6>
                             <h1 style={{ fontSize: '15px', color: 'black',position: 'absolute', top:'19.95rem',left:'8.6rem',wordBreak:'break-all' }}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '50%', transform: 'translate(-50%,0)' }} alt="logo" />}
                     </div>
                 );
             }
             case "template5":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2" >
-                        <img src={template5} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template5" >
+                        <img src={template5} style={{ width: '45rem' }} alt='template5'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '39%', left: '36%', width: '60%' }}>
                             <h2 style={{ textTransform: 'uppercase', color: '#781114', textDecoration: 'underline', marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -104,7 +104,7 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: '#781114', textDecoration: 'underline', textTransform: 'uppercase' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: '#0300b0', textTransform: 'uppercase' }}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? "" : <img src={this.props.logo} style={{ position: 'absolute', width: '6rem', borderRadius: '50%', top: '20%', left: '35%' }} alt="logo" />}
+                        {this.props.logo === '' ? "" : <img src={this.props.logo} style={{ position: 'absolute', width: '6rem', borderRadius: '50%', top: '20%', left: '50%', transform: 'translate(-50%,0)' }} alt="logo" />}
         
                     </div>
                 );
@@ -112,8 +112,8 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template6":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
-                        <img src={template6} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template6">
+                        <img src={template6} style={{ width: '45rem' }} alt='template6'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '35%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                             <h2 style={{color: 'white', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -125,7 +125,7 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: 'white', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: '#ffff58', fontWeight: '100'}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '26%', left: '50%', transform: 'translate(-50%,0)' }} alt="logo" />}
         
                     </div>
                 );
@@ -133,8 +133,8 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template7":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
-                        <img src={template7} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template7">
+                        <img src={template7} style={{ width: '45rem' }} alt='template7'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                             <h2 style={{color: 'orange', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -146,7 +146,7 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: 'red', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: 'black',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '62%', left: '50%', transform: 'translate(-50%,0)' }} alt="logo" />}
         
                     </div>
                 );
@@ -154,8 +154,8 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template8":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
-                        <img src={template8} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template8">
+                        <img src={template8} style={{ width: '45rem' }} alt='template8'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                             <h2 style={{color: '#560073', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -167,7 +167,7 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: '#c929ff', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: 'rgb(19, 22, 207)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '62%', left: '50%', transform: 'translate(-50%,0)' }} alt="logo" />}
         
                     </div>
                 );
@@ -175,8 +175,8 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template9":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
-                        <img src={template9} style={{ width: '45rem' }}></img>
+                    <div style={{ position: 'relative' }} id="template9">
+                        <img src={template9} style={{ width: '45rem' }} alt='template9'></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                             <h2 style={{color: '#0edee6', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
@@ -188,7 +188,7 @@ export class ComponentToPrint extends React.PureComponent {
                             <h2 style={{ fontSize: '12px', color: '#0edee6', textDecoration: 'underline' }}>Course Director</h2>
                             <h1 style={{ fontSize: '20px', color: 'rgb(6, 124, 214)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
                         </div>
-                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '61%', left: '53%', transform: 'translate(-50%,0)' }} alt="logo" />}
         
                     </div>
 
@@ -229,13 +229,22 @@ function Homepage() {
     const [author, setauthor] = useState('');
     const [logo, setlogo] = useState('');
     const [template,settemplate]=useState('template4');
+    const [uploadLogo, setUploadLogo] = useState();
     const componentRef = useRef();
-    const handlePrint = useReactToPrint({
-        content: () => componentRef.current,
-    });
     const signout = () => {
         firebase.auth().signOut();
     }
+    const logoUploadRef = useRef();
+    const handleUploadLogoClick = (e) => {
+        logoUploadRef.current.click()
+    }
+    const handleUploadLogoChange = (e) => {
+        const file = e.target.files[0];
+        setUploadLogo(file)
+        setlogo(URL.createObjectURL(file))
+        e.target.value = null;
+    }
+
     return (
         <div className="main">
             <Popup trigger={pop} setpop={setpop} >
@@ -308,10 +317,17 @@ function Homepage() {
                         </div>
                         <div className="input-box">
                             <span className="details">Logo URL</span>
-                            <input type="text" placeholder="Enter logo URL" onChange={e => setlogo(e.target.value)} />
+                                <div className='logo-inputs'>
+                                    <input type="text" placeholder={!uploadLogo?.name ? "Enter logo URL" : uploadLogo?.name} onChange={e => setlogo(e.target.value)} />
+                                        <div className='logo-upload-icon'>
+                                            <button onClick={handleUploadLogoClick}>
+                                                <ArrowUpwardIcon /> 
+                                            </button>
+                                            <input type='file' accept="image/png, image/gif, image/jpeg" hidden ref={logoUploadRef} onChange={handleUploadLogoChange}/>
+                                        </div>
+                                </div>
                         </div>
 
-                        {/* <button className="generate" onClick={handlePrint}>Generate  Certificate</button> */}
                         <ReactToPrint
                             trigger={() => <button className="generate" >Print this out!</button>}
                             content={() => componentRef.current}
