@@ -259,11 +259,3 @@
   width: 100%;
   height: 100%;
 }
-.my-custom-scrollbar {
-  position: relative;
-  height: auto;
-  overflow: auto;
-  }
-  .table-wrapper-scroll-y {
-  display: block;
-  }
