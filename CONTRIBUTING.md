@@ -1,11 +1,11 @@
 ## Contribution Guidelines🏗
 
-Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and make it better. 
-To start contributing, follow the below guidelines: 
+Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and make it better.
+To start contributing, follow the below guidelines:
 
-**1.**  Fork [this](https://github.com/vedant-jain03/certificate-generator) repository.
+**1.** Fork [this](https://github.com/vedant-jain03/certificate-generator) repository.
 
-**2.**  Clone your forked copy of the project.
+**2.** Clone your forked copy of the project.
 
 ```
 git clone https://github.com/<your_user_name>/certificate-generator.git
@@ -20,7 +20,7 @@ cd certificate-generator
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/vedant-jain03/certificate-generator.git 
+git remote add upstream https://github.com/vedant-jain03/certificate-generator.git
 ```
 
 **5.** Check the remotes for this repository.
@@ -32,7 +32,7 @@ git remote -v
 **6.** Always take a pull from the upstream repository to your master branch to keep it at par with the main project(updated repository).
 
 ```
-git pull upstream main
+git pull upstream master
 ```
 
 **7.** Create a new branch.
@@ -46,7 +46,7 @@ git checkout -b <your_branch_name>
 **9.** Track your changes:heavy_check_mark: .
 
 ```
-git add . 
+git add .
 ```
 
 **10.** Commit your changes .
@@ -66,6 +66,5 @@ git push -u origin <your_branch_name>
 **13.** Add appropriate title and description to your pull request explaining your changes and efforts done.
 
 **14.** Click on `Create Pull Request`.
-
 
 **15** Voila :exclamation: You have made a PR to the awesome-javascript-projects :boom: . Wait for your submission to be accepted and your PR to be merged.
