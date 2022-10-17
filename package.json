@@ -4,19 +4,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "@testing-library/jest-dom": "^5.12.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "dotenv": "^16.0.3",
-    "firebase": "^8.6.3",
-    "pdf-lib": "^1.16.0",
+    "firebase": "^8.10.1",
+    "pdf-lib": "^1.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-firebaseui": "^5.0.2",
-    "react-scripts": "4.0.3",
-    "react-to-print": "^2.12.6",
+    "react-scripts": "^4.0.3",
+    "react-to-print": "^2.14.7",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -46,6 +46,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.0"
+    "gh-pages": "^3.2.3"
   }
 }
