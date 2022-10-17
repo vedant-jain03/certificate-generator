@@ -43,7 +43,7 @@ function Homepage() {
         <div className="left">
           <h2>Hash/Hub</h2>
         </div>
-        <div className="Middle">
+        <div className="header-middle">
           <h1>Certificate Generator</h1>
         </div>
         <div className="right">
@@ -59,7 +59,7 @@ function Homepage() {
           <button onClick={signout}>Logout</button>
         </div>
       </div>
-      <div className="maincontainer">
+      <div className="main-container">
         <div className="leftmost">
           <h1>Templates</h1>
           <div
