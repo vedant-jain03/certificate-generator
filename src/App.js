@@ -23,9 +23,9 @@ var uiConfig = {
 function App() {
   const [user, setuser] = useState(null);
   useEffect(() => {
-    const authObserver = firebase.auth().onAuthStateChanged((user) => {
-      setuser(user);
-    })
+    //const authObserver = firebase.auth().onAuthStateChanged((user) => {
+    //  setuser(user);
+    //})
   })
   if (user) {
     return (
