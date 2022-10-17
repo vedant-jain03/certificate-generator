@@ -9,15 +9,26 @@ import firebase from "../firebase";
 import ReactToPrint from "react-to-print";
 import Popup from "./Popup";
 import { ComponentToPrint } from "./ComponentToPrint";
+import {
+  template1,
+  template2,
+  template3,
+  template4,
+  template5,
+  template6,
+  template7,
+  template8,
+  template9,
+} from "../cert_templates/templates";
 
 function Homepage() {
-  const [pop, setpop] = useState(false);
-  const [name, setname] = useState("");
-  const [heading, setheading] = useState("");
-  const [desc, setdesc] = useState("");
-  const [author, setauthor] = useState("");
-  const [logo, setlogo] = useState("");
-  const [template, settemplate] = useState("template4");
+  const [pop, setPop] = useState(false);
+  const [name, setName] = useState("");
+  const [heading, setHeading] = useState("");
+  const [desc, setDesc] = useState("");
+  const [author, setAuthor] = useState("");
+  const [logo, setLogo] = useState("");
+  const [template, setTemplate] = useState("template4");
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -27,7 +38,7 @@ function Homepage() {
   };
   return (
     <div className="main">
-      <Popup trigger={pop} setpop={setpop}></Popup>
+      <Popup trigger={pop} setPop={setPop}></Popup>
       <div className="header">
         <div className="left">
           <h2>Hash/Hub</h2>
@@ -36,7 +47,7 @@ function Homepage() {
           <h1>Certificate Generator</h1>
         </div>
         <div className="right">
-          <button className="info" title="Info" onClick={() => setpop(true)}>
+          <button className="info" title="Info" onClick={() => setPop(true)}>
             i
           </button>
           <a href="https://github.com/vedant-jain03/certificate-generator">
@@ -53,55 +64,55 @@ function Homepage() {
           <h1>Templates</h1>
           <div
             className={`templates ${template === "template1" ? "active" : ""}`}
-            onClick={() => settemplate("template1")}
+            onClick={() => setTemplate("template1")}
           >
             <img src={template1} alt="" />
           </div>
           <div
             className={`templates ${template === "template2" ? "active" : ""}`}
-            onClick={() => settemplate("template2")}
+            onClick={() => setTemplate("template2")}
           >
             <img src={template2} alt="" />
           </div>
           <div
             className={`templates ${template === "template3" ? "active" : ""}`}
-            onClick={() => settemplate("template3")}
+            onClick={() => setTemplate("template3")}
           >
             <img src={template3} alt="" />
           </div>
           <div
             className={`templates ${template === "template4" ? "active" : ""}`}
-            onClick={() => settemplate("template4")}
+            onClick={() => setTemplate("template4")}
           >
             <img src={template4} alt="" />
           </div>
           <div
             className={`templates ${template === "template5" ? "active" : ""}`}
-            onClick={() => settemplate("template5")}
+            onClick={() => setTemplate("template5")}
           >
             <img src={template5} alt="" />
           </div>
           <div
             className={`templates ${template === "template6" ? "active" : ""}`}
-            onClick={() => settemplate("template6")}
+            onClick={() => setTemplate("template6")}
           >
             <img src={template6} alt="" />
           </div>
           <div
             className={`templates ${template === "template7" ? "active" : ""}`}
-            onClick={() => settemplate("template7")}
+            onClick={() => setTemplate("template7")}
           >
             <img src={template7} alt="" />
           </div>
           <div
             className={`templates ${template === "template8" ? "active" : ""}`}
-            onClick={() => settemplate("template8")}
+            onClick={() => setTemplate("template8")}
           >
             <img src={template8} alt="" />
           </div>
           <div
             className={`templates ${template === "template9" ? "active" : ""}`}
-            onClick={() => settemplate("template9")}
+            onClick={() => setTemplate("template9")}
           >
             <img src={template9} alt="" />
           </div>
@@ -125,7 +136,7 @@ function Homepage() {
                 type="text"
                 placeholder="Enter heading"
                 onChange={(e) => {
-                  setheading(e.target.value);
+                  setHeading(e.target.value);
                 }}
               />
             </div>
@@ -135,7 +146,7 @@ function Homepage() {
                 type="text"
                 placeholder="Enter participant Name"
                 onChange={(e) => {
-                  setname(e.target.value);
+                  setName(e.target.value);
                 }}
               />
             </div>
@@ -144,7 +155,7 @@ function Homepage() {
               <textarea
                 type="text"
                 placeholder="Enter Description"
-                onChange={(e) => setdesc(e.target.value)}
+                onChange={(e) => setDesc(e.target.value)}
               />
             </div>
             <div className="input-box">
@@ -152,7 +163,7 @@ function Homepage() {
               <input
                 type="text"
                 placeholder="Enter Author Name"
-                onChange={(e) => setauthor(e.target.value)}
+                onChange={(e) => setAuthor(e.target.value)}
               />
             </div>
             <div className="input-box">
@@ -160,7 +171,7 @@ function Homepage() {
               <input
                 type="text"
                 placeholder="Enter logo URL"
-                onChange={(e) => setlogo(e.target.value)}
+                onChange={(e) => setLogo(e.target.value)}
               />
             </div>
 

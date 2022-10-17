@@ -1,8 +1,9 @@
 const Popup = (props) => {
-  return props.trigger ? (
+  const { trigger, setPop } = props;
+  return trigger ? (
     <div className="popup">
       <div className="popup-box">
-        <button onClick={() => props.setpop(false)}>Close</button>
+        <button onClick={() => setPop(false)}>Close</button>
         <h1>Rules for Setup Printing Page</h1>
         <div className="content">
           <li>Destination: Save as PDF</li>

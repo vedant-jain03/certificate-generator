@@ -1,13 +1,15 @@
 import React from "react";
-import template1 from "../cert_templates/Template1.png";
-import template2 from "../cert_templates/Template2.png";
-import template3 from "../cert_templates/Template3.png";
-import template4 from "../cert_templates/Template4.jpeg";
-import template5 from "../cert_templates/Template5.png";
-import template6 from "../cert_templates/Template6.png";
-import template7 from "../cert_templates/Template7.png";
-import template8 from "../cert_templates/Template8.png";
-import template9 from "../cert_templates/Template9.gif";
+import {
+  template1,
+  template2,
+  template3,
+  template4,
+  template5,
+  template6,
+  template7,
+  template8,
+  template9,
+} from "../cert_templates/templates";
 export class ComponentToPrint extends React.PureComponent {
   render() {
     // eslint-disable-next-line default-case
