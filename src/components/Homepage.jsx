@@ -257,7 +257,7 @@ function Homepage() {
             <div className="maincontainer">
                 <div className="leftmost">
                     <h1>Templates</h1>
-                    <div className={`templates ${template==='template1'?"active":""}`} onClick={()=>settemplate("template1")} >
+                             <div className={`templates ${template==='template1'?"active":""}`} onClick={()=>settemplate("template1")} >
                         <img src={template1} alt="" />
                     </div>
                     <div className={`templates ${template==='template2'?"active":""}`} onClick={()=>settemplate("template2")} >
