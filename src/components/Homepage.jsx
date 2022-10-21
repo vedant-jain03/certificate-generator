@@ -205,13 +205,15 @@ const Popup = (props) => {
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-box">
-                <button onClick={() => props.setpop(false)} >Close</button>
-                <h1>Rules for Setup Printing Page</h1>
+                <button onClick={() => props.setpop(false)} >x</button>
+                <h3 style={{fontWeight: '100'}}>Rules for Setup Printing Page</h3>
                 <div className="content">
                     <li>Destination: Save as PDF</li>
                     <li>Pages: All</li>
                     <li>Layout: Landscape</li>
-                    <h2>More Settings</h2>
+                </div>
+                <h3 style={{fontWeight: '100', marginTop: '10px'}}>More Settings</h3>
+                <div className="content">
                     <li>Paper Size: A4</li>
                     <li>Paper per Sheet:1</li>
                     <li>Margins: none</li>
