@@ -13,6 +13,8 @@ import template6 from "../cert_templates/Template6.png";
 import template7 from "../cert_templates/Template7.png";
 import template8 from "../cert_templates/Template8.png";
 import template9 from "../cert_templates/Template9.gif";
+import template10 from "../cert_templates/Template10.jpg";
+import template11 from "../cert_templates/Template11.png";
 import ReactToPrint from 'react-to-print';
 
 export class ComponentToPrint extends React.PureComponent {
@@ -195,8 +197,51 @@ export class ComponentToPrint extends React.PureComponent {
                 );
 
             }
+            case "template10":{
+                return (
+                    <div style={{ position: 'relative' }} id="template3">
+                        <img src={template10} style={{ width: '45rem' }}></img>
+        
+                        <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
+                            <h2 style={{color: '#0edee6', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
+                            <h3 style={{ fontSize: '16px', fontWeight: '500', color: 'rgb(6, 124, 214)', textTransform: 'uppercase', letterSpacing: '3px' }}>is hereby awarded to</h3>
+                            <h1 style={{ fontSize: '3rem', color: '#0edee6' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
+                            <p style={{ fontSize: '15px', fontWeight: '600', color: 'rgb(6, 124, 214)',width:'60%',textAlign:'center' }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</p>
+                        </div>
+                        <div className="author" style={{ position: 'absolute', top: '68%', left: '44%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                            <h2 style={{ fontSize: '12px', color: '#0edee6', textDecoration: 'underline' }}>Course Director</h2>
+                            <h1 style={{ fontSize: '20px', color: 'rgb(6, 124, 214)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                        </div>
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+        
+                    </div>
 
+                );
 
+            }
+            case "template11":{
+                return (
+                    <div style={{ position: 'relative' }} id="template3">
+                        <img src={template11} style={{ width: '45rem' }}></img>
+        
+                        <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
+                            <h2 style={{color: '#0edee6', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
+                            <h3 style={{ fontSize: '16px', fontWeight: '500', color: 'rgb(6, 124, 214)', textTransform: 'uppercase', letterSpacing: '3px' }}>is hereby awarded to</h3>
+                            <h1 style={{ fontSize: '3rem', color: '#0edee6' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
+                            <p style={{ fontSize: '15px', fontWeight: '600', color: 'rgb(6, 124, 214)',width:'60%',textAlign:'center' }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</p>
+                        </div>
+                        <div className="author" style={{ position: 'absolute', top: '68%', left: '44%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                            <h2 style={{ fontSize: '12px', color: '#0edee6', textDecoration: 'underline' }}>Course Director</h2>
+                            <h1 style={{ fontSize: '20px', color: 'rgb(6, 124, 214)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                        </div>
+                        {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+        
+                    </div>
+
+                );
+
+            }
+            
         }
         
     }
@@ -285,6 +330,12 @@ function Homepage() {
                     </div>
                     <div className={`templates ${template==='template9'?"active":""}`} onClick={()=>settemplate("template9")} >
                         <img src={template9} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template10'?"active":""}`} onClick={()=>settemplate("template10")} >
+                        <img src={template10} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template11'?"active":""}`} onClick={()=>settemplate("template11")} >
+                        <img src={template11} alt="" />
                     </div>
                 </div>
                 <div className="middle">
