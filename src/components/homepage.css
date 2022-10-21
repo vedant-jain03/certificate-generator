@@ -249,26 +249,26 @@
 .popup-box {
   background: white;
   padding: 2rem;
-  /* display: flex; */
-  border-radius: 40px;
-  /* flex-direction: column; */
-  /* justify-content: center; */
+  border-radius: 5px;
+  position: relative;
 }
-
-.popup-box button {
-  padding: 6px 18px;
-  margin-left: 23rem;
+.popup-box button{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 6px 10px;
   border: none;
   background: #f44336;
   color: white;
-  border-radius: 5px;
-  font-weight: 500;
+  border-radius: 50%;
+  font-weight: bold;
   cursor: pointer;
 }
 
 .popup-box li {
   color: #ff6c37;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .leftmost .templates {

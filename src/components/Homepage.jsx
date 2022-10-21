@@ -13,8 +13,9 @@ import template6 from "../cert_templates/Template6.png";
 import template7 from "../cert_templates/Template7.png";
 import template8 from "../cert_templates/Template8.png";
 import template9 from "../cert_templates/Template9.gif";
-import template10 from "../cert_templates/Template10.png";
-import ReactToPrint from "react-to-print";
+import template10 from "../cert_templates/Template10.jpg";
+import template11 from "../cert_templates/Template11.png";
+import ReactToPrint from 'react-to-print';
 
 export class ComponentToPrint extends React.PureComponent {
   render() {
@@ -128,6 +129,7 @@ export class ComponentToPrint extends React.PureComponent {
           </div>
         );
       }
+      
       case "template2": {
         return (
           <div style={{ position: "relative" }} id="template2">
@@ -221,6 +223,7 @@ export class ComponentToPrint extends React.PureComponent {
           </div>
         );
       }
+      
       case "template3": {
         return (
           <div style={{ position: "relative" }} id="template3">
@@ -325,6 +328,7 @@ export class ComponentToPrint extends React.PureComponent {
           </div>
         );
       }
+      
       case "template4": {
         return (
           <div style={{ position: "relative" }} id="template4">
@@ -376,6 +380,7 @@ export class ComponentToPrint extends React.PureComponent {
           </div>
         );
       }
+      
       case "template5": {
         return (
           <div style={{ position: "relative" }} id="template5">
@@ -484,7 +489,7 @@ export class ComponentToPrint extends React.PureComponent {
           </div>
         );
       }
-
+      
       case "template6": {
         return (
           <div style={{ position: "relative" }} id="template6">
@@ -1027,29 +1032,54 @@ export class ComponentToPrint extends React.PureComponent {
           </div>
         );
       }
+      
+      case "template11":{
+          return (
+              <div style={{ position: 'relative' }} id="template3">
+                  <img src={template11} style={{ width: '45rem' }}></img>
+
+                  <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
+                      <h2 style={{color: '#0edee6', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
+                      <h3 style={{ fontSize: '16px', fontWeight: '500', color: 'rgb(6, 124, 214)', textTransform: 'uppercase', letterSpacing: '3px' }}>is hereby awarded to</h3>
+                      <h1 style={{ fontSize: '3rem', color: '#0edee6' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
+                      <p style={{ fontSize: '15px', fontWeight: '600', color: 'rgb(6, 124, 214)',width:'60%',textAlign:'center' }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</p>
+                  </div>
+                  <div className="author" style={{ position: 'absolute', top: '68%', left: '44%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                      <h2 style={{ fontSize: '12px', color: '#0edee6', textDecoration: 'underline' }}>Course Director</h2>
+                      <h1 style={{ fontSize: '20px', color: 'rgb(6, 124, 214)',}}>{this.props.author === '' ? 'Author Name' : this.props.author}</h1>
+                  </div>
+                  {this.props.logo === '' ? '' : <img src={this.props.logo} style={{ position: 'absolute', width: '4rem', borderRadius: '50%', top: '10%', left: '45%' }} alt="logo" />}
+              </div>
+          );
+      }
+      
     }
   }
 }
+
 const Popup = (props) => {
-  return props.trigger ? (
-    <div className="popup">
-      <div className="popup-box">
-        <button onClick={() => props.setpop(false)}>Close</button>
-        <h1>Rules for Setup Printing Page</h1>
-        <div className="content">
-          <li>Destination: Save as PDF</li>
-          <li>Pages: All</li>
-          <li>Layout: Landscape</li>
-          <h2>More Settings</h2>
-          <li>Paper Size: A4</li>
-          <li>Paper per Sheet:1</li>
-          <li>Margins: none</li>
-          <li>Scale: Custom 200</li>
+    return (props.trigger) ? (
+        <div className="popup">
+            <div className="popup-box">
+                <button onClick={() => props.setpop(false)} >x</button>
+                <h3 style={{fontWeight: '100'}}>Rules for Setup Printing Page</h3>
+                <div className="content">
+                    <li>Destination: Save as PDF</li>
+                    <li>Pages: All</li>
+                    <li>Layout: Landscape</li>
+                </div>
+                <h3 style={{fontWeight: '100', marginTop: '10px'}}>More Settings</h3>
+                <div className="content">
+                    <li>Paper Size: A4</li>
+                    <li>Paper per Sheet:1</li>
+                    <li>Margins: none</li>
+                    <li>Scale: Custom 200</li>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
   ) : null;
 };
+
 function Homepage() {
   const [pop, setpop] = useState(false);
   const [name, setname] = useState("");
@@ -1065,6 +1095,7 @@ function Homepage() {
   const signout = () => {
     firebase.auth().signOut();
   };
+  
   return (
     <div className="main">
       <Popup trigger={pop} setpop={setpop}></Popup>
@@ -1175,15 +1206,76 @@ function Homepage() {
                 }}
               />
             </div>
-            <div className="input-box">
-              <span className="details">Particpant Name</span>
-              <input
-                type="text"
-                placeholder="Enter participant Name"
-                onChange={(e) => {
-                  setname(e.target.value);
-                }}
-              />
+            <div className="maincontainer">
+                <div className="leftmost">
+                    <h1>Templates</h1>
+                             <div className={`templates ${template==='template1'?"active":""}`} onClick={()=>settemplate("template1")} >
+                        <img src={template1} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template2'?"active":""}`} onClick={()=>settemplate("template2")} >
+                        <img src={template2} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template3'?"active":""}`} onClick={()=>settemplate("template3")} >
+                        <img src={template3} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template4'?"active":""}`} onClick={()=>settemplate("template4")} >
+                        <img src={template4} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template5'?"active":""}`} onClick={()=>settemplate("template5")} >
+                        <img src={template5} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template6'?"active":""}`} onClick={()=>settemplate("template6")} >
+                        <img src={template6} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template7'?"active":""}`} onClick={()=>settemplate("template7")} >
+                        <img src={template7} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template8'?"active":""}`} onClick={()=>settemplate("template8")} >
+                        <img src={template8} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template9'?"active":""}`} onClick={()=>settemplate("template9")} >
+                        <img src={template9} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template10'?"active":""}`} onClick={()=>settemplate("template10")} >
+                        <img src={template10} alt="" />
+                    </div>
+                    <div className={`templates ${template==='template11'?"active":""}`} onClick={()=>settemplate("template11")} >
+                        <img src={template11} alt="" />
+                    </div>
+                </div>
+                <div className="middle">
+                    <ComponentToPrint ref={componentRef} name={name} heading={heading} desc={desc} author={author} logo={logo} template={template} />
+                </div>
+                <div className="right">
+                    <div className="form">
+                        <div className="input-box">
+                            <span className="details">Heading</span>
+                            <input type="text" placeholder="Enter heading" onChange={e => { setheading(e.target.value) }} />
+                        </div>
+                        <div className="input-box">
+                            <span className="details">Particpant Name</span>
+                            <input type="text" placeholder="Enter participant Name" onChange={e => { setname(e.target.value) }} />
+                        </div>
+                        <div className="input-box">
+                            <span className="details">Description</span>
+                            <textarea type="text" placeholder="Enter Description" onChange={e => setdesc(e.target.value)} />
+                        </div>
+                        <div className="input-box">
+                            <span className="details">Author Name</span>
+                            <input type="text" placeholder="Enter Author Name" onChange={e => setauthor(e.target.value)} />
+                        </div>
+                        <div className="input-box">
+                            <span className="details">Logo URL</span>
+                            <input type="text" placeholder="Enter logo URL" onChange={e => setlogo(e.target.value)} />
+                        </div>
+
+                        {/* <button className="generate" onClick={handlePrint}>Generate  Certificate</button> */}
+                        <ReactToPrint
+                            trigger={() => <button className="generate" >Print this out!</button>}
+                            content={() => componentRef.current}
+                        />
+                    </div>
+                </div>
             </div>
             <div className="input-box">
               <span className="details">Description</span>
