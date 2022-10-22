@@ -1036,7 +1036,13 @@ export class ComponentToPrint extends React.PureComponent {
       case "template11":{
           return (
               <div style={{ position: 'relative' }} id="template3">
-                  <img src={template11} style={{ width: '45rem' }}></img>
+                  <img
+                    src={template11}
+                     style={{
+                      width: "45rem"
+                     }} 
+                     alt="logo"
+                   />
 
                   <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
                       <h2 style={{color: '#0edee6', textTransform:'uppercase', letterSpacing:'3px' , marginBottom: '1rem' }}>{this.props.heading === '' ? 'Certificate of Achievement' : this.props.heading}</h2>
