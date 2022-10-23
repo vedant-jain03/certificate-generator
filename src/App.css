@@ -39,7 +39,7 @@
 
 #maincontainer1{
   background-color: rgb(28, 39, 43);
-  height: 84.5px;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
