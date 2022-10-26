@@ -23,7 +23,7 @@ export class ComponentToPrint extends React.PureComponent {
         switch(this.props.template){
             case "template1":{
                 return (
-                    <div style={{ position: 'relative' }} id="template1" >
+                    <div style={{ position: 'relative', border: '1px solid gray' }} id="template1" >
                         <img src={template1} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '39%', left: '36%', width: '60%' }}>
@@ -43,7 +43,7 @@ export class ComponentToPrint extends React.PureComponent {
             }
             case "template2":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray' }} id="template2">
                         <img src={template2} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '34%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -63,7 +63,7 @@ export class ComponentToPrint extends React.PureComponent {
             }
             case "template3":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2">
                         <img src={template3} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -83,7 +83,7 @@ export class ComponentToPrint extends React.PureComponent {
             }
             case "template4":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2">
                         <img src={template4} style={{ width: '45rem' }}></img>
                             <h1 style={{ fontSize: '3rem', color: 'black',position: 'absolute', top:'9rem',left:'25px',wordBreak:'break-all' }}>{this.props.name === '' ? 'Name' : this.props.name}</h1>
                             <h6 style={{ fontSize: '15px', fontWeight: '600', color: '#213a62',width:'60%',position: 'absolute', top:'17rem',left:'27px',wordBreak:'break-all'  }}>{this.props.desc === '' ? 'for the active participation in the event and for giving efforts,ideas and Knowledge.' : this.props.desc}</h6>
@@ -93,7 +93,7 @@ export class ComponentToPrint extends React.PureComponent {
             }
             case "template5":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2" >
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2" >
                         <img src={template5} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '39%', left: '36%', width: '60%' }}>
@@ -114,7 +114,7 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template6":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2">
                         <img src={template6} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '35%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -135,7 +135,7 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template7":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2">
                         <img src={template7} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -156,7 +156,7 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template8":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2">
                         <img src={template8} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -177,7 +177,7 @@ export class ComponentToPrint extends React.PureComponent {
 
             case "template9":{
                 return (
-                    <div style={{ position: 'relative' }} id="template2">
+                    <div style={{ position: 'relative', border: '1px solid gray'  }} id="template2">
                         <img src={template9} style={{ width: '45rem' }}></img>
         
                         <div className="info" style={{ position: 'absolute', top: '25%', width: '100%' ,display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -277,19 +277,29 @@ function Homepage() {
     const [logo, setlogo] = useState('');
     const [template,settemplate]=useState('template4');
     const componentRef = useRef();
+    const [theme, setTheme] = useState("dark");
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
     const signout = () => {
         firebase.auth().signOut();
     }
+    const toggleTheme =() => {
+        if(theme == "dark") {
+            setTheme("light");
+        }
+        else {
+            setTheme("dark");
+        }
+    }
     return (
-        <div className="main">
+        <div className="main" style={{background: (theme == "dark")?"rgb(28, 39, 43)":"white"}}>
             <Popup trigger={pop} setpop={setpop} >
             </Popup>
             <div className="header">
                 <div className="left">
-                    <h2>Hash/Hub</h2>
+                    <h2 style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Hash/Hub</h2>
+                    <button id="toggler" onClick={()=>toggleTheme()}>{theme == 'light'?"Dark Theme":"Light Theme"}</button>
                 </div>
                 <div className="Middle">
                     <h1>Certificate Generator</h1>
@@ -302,7 +312,7 @@ function Homepage() {
             </div>
             <div className="maincontainer">
                 <div className="leftmost">
-                    <h1>Templates</h1>
+                    <h1 style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Templates</h1>
                              <div className={`templates ${template==='template1'?"active":""}`} onClick={()=>settemplate("template1")} >
                         <img src={template1} alt="" />
                     </div>
@@ -343,23 +353,23 @@ function Homepage() {
                 <div className="right">
                     <div className="form">
                         <div className="input-box">
-                            <span className="details">Heading</span>
+                            <span className="details" style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Heading</span>
                             <input type="text" placeholder="Enter heading" onChange={e => { setheading(e.target.value) }} />
                         </div>
                         <div className="input-box">
-                            <span className="details">Particpant Name</span>
+                            <span className="details" style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Particpant Name</span>
                             <input type="text" placeholder="Enter participant Name" onChange={e => { setname(e.target.value) }} />
                         </div>
                         <div className="input-box">
-                            <span className="details">Description</span>
+                            <span className="details" style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Description</span>
                             <textarea type="text" placeholder="Enter Description" onChange={e => setdesc(e.target.value)} />
                         </div>
                         <div className="input-box">
-                            <span className="details">Author Name</span>
+                            <span className="details" style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Author Name</span>
                             <input type="text" placeholder="Enter Author Name" onChange={e => setauthor(e.target.value)} />
                         </div>
                         <div className="input-box">
-                            <span className="details">Logo URL</span>
+                            <span className="details" style={{color: (theme == "dark")?"white":"rgb(28, 39, 43)"}}>Logo URL</span>
                             <input type="text" placeholder="Enter logo URL" onChange={e => setlogo(e.target.value)} />
                         </div>
 
