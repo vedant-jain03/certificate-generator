@@ -27,10 +27,6 @@ $ cd certificate-generator
 ```
 $ npm install
 ```
-- Rename .env.example to .env and add your Firebase api key
-```
-$ mv .env.example .env
-```
 - Start LocalHost Server
 ```
 $ npm run start
