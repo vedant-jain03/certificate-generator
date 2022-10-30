@@ -52,11 +52,11 @@ $ npm run start
 
 <h2 id="prs">Issues & Pull Requests</h2>
 
-Before making pull requests please look at our contributing guidelines. You can start working on the issue which are mentioned in issues section. Just drop a comment before working on the issue. Thank you!
+Before making pull requests please look at our contributing guidelines. You can start working on the issue which are mentioned in issues section or add an issue. Just drop a comment before working on the issue. Thank you!
 
 <h2 id="license">License</h2>
 
-The **code** is this repo is licensed under the MIT license. Feel free to use and share it as per the license.
+The **code** in this repository is licensed under the MIT license. Feel free to use and share it as per the license.
 
 <br>
 
