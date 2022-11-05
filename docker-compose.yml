@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    image: app:certificate_generator
+    container_name: certificate_generator_container
+    command: npm start

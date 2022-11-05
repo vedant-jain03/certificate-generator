@@ -19,6 +19,13 @@
 
 ## Setup Steps
 
+#### Using Docker
+- Make sure you have docker and docker-compose installed
+```
+$ docker-compose up
+```
+
+#### Manually
 - Go to directory
 ```
 $ cd certificate-generator
