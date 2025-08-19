@@ -10,12 +10,12 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "dotenv": "^16.0.3",
-    "firebase": "^8.6.3",
+    "firebase": "^12.1.0",
     "pdf-lib": "^1.16.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-firebaseui": "^5.0.2",
-    "react-scripts": "4.0.3",
+    "react-firebaseui": "^0.0.1",
+    "react-scripts": "^0.0.0",
     "react-to-print": "^2.12.6",
     "web-vitals": "^1.1.2"
   },
@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.0"
+    "eslint-config-react-app": "^7.0.1",
+    "gh-pages": "^6.3.0"
   }
 }
